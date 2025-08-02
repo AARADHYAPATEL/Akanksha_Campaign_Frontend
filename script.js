@@ -21,7 +21,7 @@ function pledgeVote() {
     return;
   }
 
-  fetch("/api/vote", {
+  fetch("https://akanksha-campaign-backend.onrender.com", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ deviceId })
@@ -40,3 +40,4 @@ function pledgeVote() {
       thankYouMsg.innerText = "❌ You already voted.";
     });
 }
+
